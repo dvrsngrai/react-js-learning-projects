@@ -15,10 +15,21 @@
     <script type="text/babel">
     // navbar component
     var Navbar = React.createClass({
+        propTypes: {
+            brand: React.PropTypes.string.isRequired,
+            dark: React.PropTypes.boolean
+        },
+        getDefaultProps: function() {
+            return {
+                brand: 'Website Name',
+                dark: false
+            }
+        },
         render: function() {
+            var navbar_class = (this.props.dark) ? 'navbar navbar-inverse' : 'navbar navbar-default';
             return (
                 <div>
-                    <nav className="navbar navbar-default">
+                    <nav className={navbar_class}>
                         <div className="container-fluid">
                             <div className="navbar-header">
                                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -27,7 +38,7 @@
                                     <span className="icon-bar"></span>
                                     <span className="icon-bar"></span>
                                 </button>
-                                <a className="navbar-brand" href="#">Brand</a>
+                                <a className="navbar-brand" href="#">{ this.props.brand }</a>
                             </div>
                             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul className="nav navbar-nav">
@@ -44,13 +55,25 @@
 
     // jumbotron component
     var Jumbotron = React.createClass({
+        propTypes: {
+            heading: React.PropTypes.string.isRequired,
+            text: React.PropTypes.string.isRequired,
+            link: React.PropTypes.string.isRequired,
+        },
+        getDefaultProps: function() {
+            return {
+                heading: 'Welcome!',
+                text: 'Welcome to our website that is built with ReactJS components.',
+                link: 'http://google.com'
+            }
+        },
         render: function() {
             return (
                 <div className="jumbotron">
                     <div className="container">
-                        <h1>Hello, world!</h1>
-                        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                        <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                        <h1>{this.props.heading}</h1>
+                        <p>{this.props.text}</p>
+                        <p><a className="btn btn-primary btn-lg" href={this.props.link} role="button">Learn more &raquo;</a></p>
                     </div>
                 </div>
             )
@@ -74,12 +97,18 @@
 
     // footer component
     var Footer = React.createClass({
+        getDefaultProps: function() {
+            return {
+                siteName: 'Website Name',
+                year: '2016'
+            }
+        },
         render: function() {
             return (
                 <div className="container">
                     <hr />
-                    <footer>
-                        <p>&copy; 2015 Company, Inc.</p>
+                    <footer className="text-center">
+                        <p>&copy; {this.props.year} {this.props.siteName}.</p>
                     </footer>
                 </div>
             )
@@ -91,7 +120,7 @@
         render: function() {
             return (
                 <div>
-                    <Navbar />
+                    <Navbar dark={false}/>
                     <Jumbotron />
                     <PageHome />
                     <Footer />
