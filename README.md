@@ -1,10 +1,10 @@
 # ReactJS Projects (Learning)
 Projects which I created while learning ReactJS.
 
-## Project One
+## 1. Project One
 A simple ReactJS project where I used ReactJS to create ReactJS components from bootstrap 3 components.
 
-## Github Profile Viwer
+## 2. Github Profile Viwer
 A simple ReactJS application which uses the github API, and JQuery AJAX with JSON data type in order to show the users information in custom ReactJS components.
 
 ### Screenshots
