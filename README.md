@@ -9,6 +9,7 @@ A simple ReactJS application which uses the github API, and JQuery AJAX with JSO
 
 ### Screenshots
 Initial Page
+
 ![alt text](http://i.imgur.com/LjKbHCg.png 'Initial Page')
 
 After Searching for another username and submitting the form by pressing the 'Enter' or 'Return' key.
