@@ -1,0 +1,28 @@
+{
+  "name": "github-profile-viewer",
+  "version": "1.0.0",
+  "description": "A github user profile viewer in ReactJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tameemsafi/react-js-learning-projects.git"
+  },
+  "author": "Tameem Safi",
+  "license": "MIT",
+  "devDependencies": {
+     "babel-core": "5.8.*",
+     "babel-loader": "5.3.*",
+     "webpack": "1.12.*"
+  },
+  "dependencies": {
+      "react": "^0.14.7",
+      "react-dom": "^0.14.6"
+  },
+  "bugs": {
+    "url": "https://github.com/tameemsafi/react-js-learning-projects/issues"
+  },
+  "homepage": "https://github.com/tameemsafi/react-js-learning-projects#readme"
+}
