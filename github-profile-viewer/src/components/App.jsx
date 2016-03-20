@@ -88,8 +88,8 @@ App.propTypes = {
 }
 
 App.defaultProps = {
-    clientId: '593ccdc9d07bb719e8ec',
-    clientSecret: 'fb58a5af5db9b54d8f97da7954e54e3013906ce0'
+    clientId: 'PRIVATE',
+    clientSecret: 'PRIVATE'
 }
 
 export default App;
