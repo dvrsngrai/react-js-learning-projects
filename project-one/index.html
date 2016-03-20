@@ -17,7 +17,7 @@
     var Navbar = React.createClass({
         propTypes: {
             brand: React.PropTypes.string.isRequired,
-            dark: React.PropTypes.boolean
+            dark: React.PropTypes.bool
         },
         getDefaultProps: function() {
             return {
@@ -27,6 +27,13 @@
         },
         render: function() {
             var navbar_class = (this.props.dark) ? 'navbar navbar-inverse' : 'navbar navbar-default';
+            var home_active = '';
+            var about_active = '';
+            if(this.props.page == 'home') {
+                home_active = 'active'
+            } else if(this.props.page == 'about') {
+                about_active = 'active';
+            }
             return (
                 <div>
                     <nav className={navbar_class}>
@@ -42,8 +49,8 @@
                             </div>
                             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul className="nav navbar-nav">
-                                    <li className="active"><a href="#">Home <span className="sr-only">(current)</span></a></li>
-                                    <li><a href="#">About</a></li>
+                                    <li className={home_active}><a onClick={this.props.homeClick} href="#">Home</a></li>
+                                    <li className={about_active}><a onClick={this.props.aboutClick} href="#">About</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +94,24 @@
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <p>Main Content</p>
+                            <h2 className="page-header">Home Page</h2>
+                            <p>Page Content...</p>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+    });
+
+    // about-page component
+    var PageAbout = React.createClass({
+        render: function() {
+            return (
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h2 className="page-header">About Page</h2>
+                            <p>Page Content...</p>
                         </div>
                     </div>
                 </div>
@@ -117,12 +141,36 @@
 
     // app component
     var App = React.createClass({
+        getInitialState: function() {
+            return {
+                page: 'home'
+            }
+        },
+        handleHomeClick: function() {
+            this.setState({
+                page: 'home'
+            });
+        },
+        handleAboutClick: function() {
+            this.setState({
+                page: 'about'
+            });
+        },
         render: function() {
+            if(this.state.page == 'home') {
+                var jumbotron = <Jumbotron />;
+                var page = <PageHome />;
+            } else if(this.state.page == 'about') {
+                var jumbotron = '';
+                var page = <PageAbout />;
+            }
             return (
                 <div>
-                    <Navbar dark={false}/>
-                    <Jumbotron />
-                    <PageHome />
+                    <Navbar dark={false}
+                            homeClick={this.handleHomeClick}
+                            aboutClick={this.handleAboutClick} />
+                    {jumbotron}
+                    {page}
                     <Footer />
                 </div>
             )
