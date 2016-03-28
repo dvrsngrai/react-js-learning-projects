@@ -42,7 +42,7 @@ Initial Page
 
 After enter a name the application will then communicate with the OMDB API in order get a JSON response which looks like this.
 
-![alt text](http://i.imgur.com/N7JEFP2.png 'JSON Response')
+![alt text](http://i.imgur.com/9uil5js.png 'JSON Response')
 
 Then the results are shown using some bootstrap 3 elements.
 
