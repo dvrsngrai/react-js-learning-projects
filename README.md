@@ -32,7 +32,7 @@ Results Page - A score of above 60% is required so you do not fail!
 
 ![alt text](http://i.imgur.com/XqyyIrD.png 'Results Page')
 
-## 4. IMDB Movie Search application
+## 4. IMDB Movie Search Application
 A simple application which searches the IMDB database using the JSON API provided by www.omdbapi.com. It uses ReactJS and Flux.
 
 ### Screenshots
@@ -42,7 +42,7 @@ Initial Page
 
 After enter a name the application will then communicate with the OMDB API in order get a JSON response which looks like this.
 
-![alt text](http://i.imgur.com/HvYeQcq.png 'JSON Response')
+![alt text](http://i.imgur.com/N7JEFP2.png 'JSON Response')
 
 Then the results are shown using some bootstrap 3 elements.
 
