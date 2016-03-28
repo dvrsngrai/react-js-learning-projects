@@ -17,7 +17,7 @@ After Searching for another username and submitting the form by pressing the 'En
 ![alt text](http://i.imgur.com/PFvVp7y.png 'Search for another user')
 
 ## 3. Quiz Application
-A Simple quiz application built with ReactJS and ES6.
+A simple quiz application built with ReactJS and ES6.
 
 ### Screenshots
 Initial Page
@@ -31,3 +31,19 @@ After picking one of the answers, it moves onto the next question and adds 1 to 
 Results Page - A score of above 60% is required so you do not fail!
 
 ![alt text](http://i.imgur.com/XqyyIrD.png 'Results Page')
+
+## 4. IMDB Movie Search application
+A simple application which searches the IMDB database using the JSON API provided by www.omdbapi.com. It uses ReactJS and Flux.
+
+### Screenshots
+Initial Page
+
+![alt text](http://i.imgur.com/gUWFPVo.png 'Initial Page')
+
+After enter a name the application will then communicate with the OMDB API in order get a JSON response which looks like this.
+
+![alt text](http://i.imgur.com/HvYeQcq.png 'JSON Response')
+
+Then the results are shown using some bootstrap 3 elements.
+
+![alt text](http://i.imgur.com/1rp4BfI.png 'Movie Search Results')

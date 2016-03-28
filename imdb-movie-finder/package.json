@@ -1,0 +1,23 @@
+{
+  "name": "imdb-movie-finder",
+  "version": "1.0.0",
+  "description": "A simple IMDB movie finder with ReactJS and Flux using the OMDB API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tameem Safi",
+  "license": "MIT",
+  "devDependencies": {
+      "browserify": "*",
+      "flux": "*",
+      "gulp": "*",
+      "reactify": "*",
+      "vinyl-source-stream": "*",
+      "object-assign": "*"
+  },
+  "dependencies": {
+      "react": "^0.14.7",
+      "react-dom": "^0.14.7"
+  }
+}
