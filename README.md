@@ -15,3 +15,19 @@ Initial Page
 After Searching for another username and submitting the form by pressing the 'Enter' or 'Return' key.
 
 ![alt text](http://i.imgur.com/PFvVp7y.png 'Search for another user')
+
+## 3. Quiz Application
+A Simple quiz application built with ReactJS and ES6.
+
+### Screenshots
+Initial Page
+
+![alt text](http://i.imgur.com/WRr6KsQ.png 'Initial Page')
+
+After picking one of the answers, it moves onto the next question and adds 1 to the score if it was correct.
+
+![alt text](http://i.imgur.com/Mue1BSW.png 'Next Question')
+
+Results Page - A score of above 60% is required so you do not fail!
+
+![alt text](http://i.imgur.com/XqyyIrD.png 'Results Page')
